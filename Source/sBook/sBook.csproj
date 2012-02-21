@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{64353FDD-B25E-4188-8087-664B470B509D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>sBook</RootNamespace>
+    <AssemblyName>sBook</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\cgi-bin\Addins\sBook</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Binary\Debug\cgi-bin\Addins\sBook</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Test|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Test</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Facebook, Version=6.0.2.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="sConsole, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\sConsole.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SNDK, Version=1.0.4416.25851, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\SNDK.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Posix" />
+    <Reference Include="System.Xml" />
+    <Reference Include="SorentoLib, Version=1.0.4429.37565, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\SorentoLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="sBook\Runtime.cs" />
+    <Compile Include="sBook.Addin\Ajax.cs" />
+    <Compile Include="sBook.Addin\Init.cs" />
+    <Compile Include="sBook\Authorization.cs" />
+    <Compile Include="sBook.Strings\Exception.cs" />
+    <Compile Include="sBook.Strings\LogDebug.cs" />
+    <Compile Include="sBook.Enums\AuthorizationPermission.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="sBook\" />
+    <Folder Include="sBook.Strings\" />
+    <Folder Include="sBook.Addin\" />
+    <Folder Include="sBook.Enums\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sBook.addin.xml" />
+  </ItemGroup>
+</Project>

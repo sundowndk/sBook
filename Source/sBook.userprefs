@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Test" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="sBook/sBook.Enums/AuthorizationPermission.cs">
+    <Files>
+      <File FileName="sBook/sBook/Authorization.cs" Line="176" Column="43" />
+      <File FileName="Test/Main.cs" Line="18" Column="70" />
+      <File FileName="sBook/sBook.Strings/Exception.cs" Line="34" Column="82" />
+      <File FileName="sBook/sBook.Enums/AuthorizationPermission.cs" Line="34" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

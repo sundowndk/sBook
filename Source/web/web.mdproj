@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ItemType>GenericProject</ItemType>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1DCFDA2F-772B-49E8-9188-8645CE1D8585}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="build.sh bin/Debug" />
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Test|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="cgi-bin\" />
+    <Folder Include="cgi-bin\Addins\" />
+    <Folder Include="cgi-bin\Addins\sBook\" />
+    <Folder Include="cgi-bin\Addins\sBook\data\" />
+    <Folder Include="cgi-bin\Addins\sBook\data\content\" />
+    <Folder Include="cgi-bin\Addins\sBook\data\content\addins\" />
+    <Folder Include="cgi-bin\Addins\sBook\data\content\addins\sbook\" />
+    <Folder Include="cgi-bin\Addins\sBook\data\html\" />
+    <Folder Include="cgi-bin\Addins\sBook\data\html\xml\" />
+    <Folder Include="cgi-bin\Addins\sBook\data\html\xml\addins\" />
+    <Folder Include="cgi-bin\Addins\sBook\data\html\xml\addins\sbook\" />
+    <Folder Include="javascript\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="build.sh" />
+  </ItemGroup>
+</Project>

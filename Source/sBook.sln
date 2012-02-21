@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sBook", "sBook\sBook.csproj", "{64353FDD-B25E-4188-8087-664B470B509D}"
+EndProject
+Project("{9344bdbb-3e7f-41fc-a0dd-8665d75ee146}") = "web", "web\web.mdproj", "{1DCFDA2F-772B-49E8-9188-8645CE1D8585}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{775EB334-351A-498C-800E-E31789E9670A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Test|Any CPU = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DCFDA2F-772B-49E8-9188-8645CE1D8585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DCFDA2F-772B-49E8-9188-8645CE1D8585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DCFDA2F-772B-49E8-9188-8645CE1D8585}.Release|Any CPU.ActiveCfg = Default|Any CPU
+		{1DCFDA2F-772B-49E8-9188-8645CE1D8585}.Release|Any CPU.Build.0 = Default|Any CPU
+		{1DCFDA2F-772B-49E8-9188-8645CE1D8585}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{64353FDD-B25E-4188-8087-664B470B509D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64353FDD-B25E-4188-8087-664B470B509D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64353FDD-B25E-4188-8087-664B470B509D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64353FDD-B25E-4188-8087-664B470B509D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64353FDD-B25E-4188-8087-664B470B509D}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{64353FDD-B25E-4188-8087-664B470B509D}.Test|Any CPU.Build.0 = Test|Any CPU
+		{775EB334-351A-498C-800E-E31789E9670A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{775EB334-351A-498C-800E-E31789E9670A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{775EB334-351A-498C-800E-E31789E9670A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{775EB334-351A-498C-800E-E31789E9670A}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{775EB334-351A-498C-800E-E31789E9670A}.Test|Any CPU.Build.0 = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Test\Test.csproj
+	EndGlobalSection
+EndGlobal

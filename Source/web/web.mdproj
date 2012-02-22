@@ -9,7 +9,7 @@
     <ProjectGuid>{1DCFDA2F-772B-49E8-9188-8645CE1D8585}</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>.\</OutputPath>
+    <OutputPath>.</OutputPath>
     <CustomCommands>
       <CustomCommands>
         <Command type="AfterBuild" command="build.sh bin/Debug" />
@@ -17,7 +17,7 @@
     </CustomCommands>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Test|AnyCPU' ">
-    <OutputPath>.\</OutputPath>
+    <OutputPath>.</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="cgi-bin\" />
@@ -32,8 +32,14 @@
     <Folder Include="cgi-bin\Addins\sBook\data\html\xml\addins\" />
     <Folder Include="cgi-bin\Addins\sBook\data\html\xml\addins\sbook\" />
     <Folder Include="javascript\" />
+    <Folder Include="cgi-bin\Addins\sBook\data\html\js\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="build.sh" />
+    <None Include="cgi-bin\Addins\sBook\data\content\addins\sbook\index.stpl" />
+    <None Include="cgi-bin\Addins\sBook\data\content\addins\sbook\index_script.stpl" />
+    <None Include="cgi-bin\Addins\sBook\data\html\xml\addins\sbook\index.xml" />
+    <None Include="javascript\authorization.js" />
+    <None Include="javascript.jsb" />
   </ItemGroup>
 </Project>

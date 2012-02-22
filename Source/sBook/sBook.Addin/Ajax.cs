@@ -58,8 +58,8 @@ namespace sBook.Addin
 
 			switch (Fullname.ToLower ())
 			{
-				#region Autoform.Form
-				case "autoform.form":
+				#region sBook.Authorization
+				case "sbook.authorization":
 					switch (Method.ToLower ())
 					{
 						case "new":
@@ -103,14 +103,8 @@ namespace sBook.Addin
 						case "list":
 						{
 //							if (Session.AccessLevel < SorentoLib.Enums.Accesslevel.Author) throw new Exception (string.Format (Autoform.Strings.Exception.AjaxSessionPriviliges, "form.list"));
-
-//							List<Hashtable> forms = new List<Hashtable> ();
-//							foreach (Form form in Form.List ())
-//							{
-//								forms.Add (form.ToAjaxItem ());
-//							}
-//							result.Data.Add ("forms", forms);
-
+							
+							result.Add (Authorization.List ());
 							break;
 						}
 					}

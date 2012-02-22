@@ -1,0 +1,35 @@
+<sui>
+	<container title="Facebook" icon="Icon32Edit" stylesheet="SUIContainerNoBorder">		
+		<layoutbox type="vertical" width="100%" height="100%" stylesheet="SUILayoutboxNoBorder">
+			<panel size="*">	
+				<tabview>
+					<tab label="Authorizations" selected="true">			
+						<layoutbox type="vertical" width="100%" height="100%" stylesheet="SUILayoutboxNoBorder">
+							<panel size="*">
+								<listview tag="authorizations" width="100%" height="100%" disabled="true">
+									<column tag="id" />		
+									<column tag="valid" label="" width="100px" visible="true" />		
+									<column tag="facebookappname" label="App" width="100px" visible="true" />		
+									<column tag="facebookusername" label="Name" width="150px" visible="true" />	
+									<column tag="permissions" label="Permissions" width="400px" visible="true" />										
+									
+								</listview>
+							</panel>
+							<panel size="100px">
+								<layoutbox type="horizontal" width="100%" height="100%" stylesheet="SUILayoutboxNoBorder">
+									<panel size="*">
+										<button tag="authorizationcreate" width="100%" label="Create" disabled="true"/>
+										<button tag="authorizationedit" width="100%" label="Edit" disabled="true"/>
+										<button tag="authorizationdelete" width="100%" label="Delete" disabled="true"/>
+									</panel>
+								</layoutbox>				
+							</panel>
+						</layoutbox>											
+					</tab>
+				</tabview>
+			</panel>
+		</layoutbox>				
+	</container>
+</sui>
+
+

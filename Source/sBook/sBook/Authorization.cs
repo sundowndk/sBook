@@ -44,10 +44,7 @@ namespace sBook
 		
 		#region Private Fields
 		private Guid _id;
-		private string _title;
-		private string _appid;
-		private string _userid;
-		private string _token;
+		private Token _token;
 		#endregion
 		
 		#region Public Fields
@@ -59,56 +56,55 @@ namespace sBook
 			}
 		}
 		
-		public string Title
+		public string FacebookAppId
 		{
 			get
 			{
-				return this._title;
-			}
-			
-			set
-			{
-				this._title = value;
+				return this._token.FacebookAppId;
 			}
 		}
 		
-		public string AppId
+		public string FacebookUserId
 		{
 			get
 			{
-				return this._appid;
+				return this._token.FacebookUserId;
 			}
 		}
 		
-		public string UserId
+		public string FacebookAppName
 		{
 			get
 			{
-				return this._userid;
+				return this._token.FacebookAppName;
 			}
 		}
 		
-		public string Username
+		public string FacebookUserName
 		{
 			get
 			{
-				string result = string.Empty;
-				
-				try
-				{
-					FacebookClient client = new FacebookClient ();				
-					var user = client.Get (this._userid + "?metadata=1") as IDictionary<string, object>;
-					result = (string)user["name"];
-				}
-				catch
-				{
-				}
-				
-				return result;
+				return this._token.FacebookUserName;
 			}
 		}
 		
-		public string Token
+		public Enums.TokenPermission Permissions
+		{
+			get
+			{
+				return this._token.Permissions;
+			}
+		}
+		
+		public bool Valid
+		{
+			get
+			{
+				return this._token.Valid;
+			}
+		}
+		
+		public Token Token
 		{
 			get
 			{
@@ -118,22 +114,14 @@ namespace sBook
 		#endregion
 		
 		#region Constructor	
-		public Authorization (string AppId, string UserId, string Token)
+		public Authorization (Token Token)
 		{
 			this._id = Guid.NewGuid ();
-			this._title = string.Empty;
-			this._appid = AppId;
-			this._userid = UserId;
 			this._token = Token;
 		}			
 		
 		private Authorization ()
 		{
-			this._id = Guid.Empty;
-			this._title = string.Empty;
-			this._appid = string.Empty;
-			this._userid = string.Empty;
-			this._token = string.Empty;
 		}			
 		#endregion
 		
@@ -145,8 +133,6 @@ namespace sBook
 				Hashtable item = new Hashtable ();
 
 				item.Add ("id", this._id);
-				item.Add ("appid", this._appid);
-				item.Add ("userid", this._userid);
 				item.Add ("token", this._token);
 				
 //				Services.Datastore.Meta meta = new Services.Datastore.Meta ();
@@ -171,9 +157,10 @@ namespace sBook
 			Hashtable result = new Hashtable ();
 
 			result.Add ("id", this._id);
-			result.Add ("appid", this._appid);
-			result.Add ("userid", this._userid);
-			result.Add ("username", this.Username);
+			result.Add ("facebookappname", this.FacebookAppName);
+			result.Add ("facebookusername", this.FacebookUserName);
+			result.Add ("permissions", this.Permissions);
+			result.Add ("valid", this.Valid);
 			result.Add ("token", this._token);
 
 			return SNDK.Convert.ToXmlDocument (result, this.GetType ().FullName.ToLower ());
@@ -192,20 +179,10 @@ namespace sBook
 
 				result._id = new Guid ((string)item["id"]);
 
-				if (item.ContainsKey ("appid"))
-				{
-					result._appid = (string)item["appid"];
-				}
-				
-				if (item.ContainsKey ("userid"))
-				{
-					result._userid = (string)item["userid"];
-				}
-				
 				if (item.ContainsKey ("token"))
 				{
-					result._token = (string)item["token"];
-				}
+					result._token = Token.FromXmlDocument ((XmlDocument)item["token"]);
+				}		
 			}
 			catch (Exception exception)
 			{
@@ -289,7 +266,12 @@ namespace sBook
 				// EXCEPTION: Exception.AuthorizationFromXMLDocument
 				throw new Exception (Strings.Exception.AuthorizationXMLDocument);
 			}
-
+			
+			if (item.ContainsKey ("token"))
+			{
+					result._token = Token.FromXmlDocument ((XmlDocument)item["token"]);
+			}
+			
 			return result;
 		}				
 		#endregion

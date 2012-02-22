@@ -38,12 +38,6 @@ namespace sBook
 {
 	public static class Runtime
 	{
-		#region Private Static Fields				
-		#endregion
-
-		#region Public Static Fields		
-		#endregion
-
 		#region Public Static Methods
 		public static void Initialize ()
 		{	
@@ -51,7 +45,9 @@ namespace sBook
 			{
 				SetDefaults ();			
 			
-				sConsole.Menu.AddItem ("addins", "sbook", "sBook", "addins/sbook/", 0);								
+				sConsole.Menu.AddItem ("addins", "sbook", "Facebook", "addins/sbook/", 0);								
+				
+				Include.Add (sConsole.Enums.IncludeType.Javascript, "/js/sbook.js", "SBOOK", 101);
 				
 				// Create symlinks if they dont exist.
 				if (!Directory.Exists (SorentoLib.Services.Config.Get<string> (SorentoLib.Enums.ConfigKey.path_addins) + "sConsole/data/content/addins/sbook"))
@@ -66,11 +62,11 @@ namespace sBook
 					dirinfo.CreateSymbolicLink (SorentoLib.Services.Config.Get<string> (SorentoLib.Enums.ConfigKey.path_addins) + "sConsole/data/html/xml/addins/sbook");
 				}
 			
-//				if (!File.Exists (SorentoLib.Services.Config.Get<string> (SorentoLib.Enums.ConfigKey.path_addins) + "sConsole/data/html/js/sform.js"))
-//				{
-//					UnixFileInfo dirinfo = new UnixFileInfo (SorentoLib.Services.Config.Get<string> (SorentoLib.Enums.ConfigKey.path_addins) + "sCMS/data/html/js/sform.js");
-//					dirinfo.CreateSymbolicLink (SorentoLib.Services.Config.Get<string> (SorentoLib.Enums.ConfigKey.path_addins) + "sConsole/data/html/js/sform.js");
-//				}				
+				if (!File.Exists (SorentoLib.Services.Config.Get<string> (SorentoLib.Enums.ConfigKey.path_addins) + "sConsole/data/html/js/sbook.js"))
+				{
+					UnixFileInfo dirinfo = new UnixFileInfo (SorentoLib.Services.Config.Get<string> (SorentoLib.Enums.ConfigKey.path_addins) + "sBook/data/html/js/sbook.js");
+					dirinfo.CreateSymbolicLink (SorentoLib.Services.Config.Get<string> (SorentoLib.Enums.ConfigKey.path_addins) + "sConsole/data/html/js/sbook.js");
+				}				
 			}
 			catch (Exception exception)
 			{

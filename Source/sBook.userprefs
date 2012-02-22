@@ -1,11 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Test" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="sBook/sBook.Enums/AuthorizationPermission.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="web/cgi-bin/Addins/sBook/data/html/xml/addins/sbook/index.xml">
     <Files>
-      <File FileName="sBook/sBook/Authorization.cs" Line="176" Column="43" />
-      <File FileName="Test/Main.cs" Line="18" Column="70" />
-      <File FileName="sBook/sBook.Strings/Exception.cs" Line="34" Column="82" />
-      <File FileName="sBook/sBook.Enums/AuthorizationPermission.cs" Line="34" Column="19" />
+      <File FileName="web/cgi-bin/Addins/sBook/data/html/xml/addins/sbook/index.xml" Line="11" Column="48" />
+      <File FileName="web/cgi-bin/Addins/sBook/data/content/addins/sbook/index_script.stpl" Line="23" Column="87" />
+      <File FileName="sBook/sBook.Addin/Ajax.cs" Line="106" Column="8" />
+      <File FileName="web/javascript/authorization.js" Line="51" Column="3" />
+      <File FileName="sBook/sBook/Authorization.cs" Line="103" Column="30" />
+      <File FileName="sBook/sBook/Token.cs" Line="104" Column="24" />
+      <File FileName="Test/Main.cs" Line="40" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

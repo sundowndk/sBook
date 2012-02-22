@@ -32,5 +32,5 @@ echo "Setting up build structur..."
 # JAVASCRIPT                                       #
 ####################################################
 echo "Building 'javascript'..."
-#jsbuilder javascript.jsb "$OUTPUTDIR/cgi-bin/Addins/sBook/data/html/js/"
+jsbuilder javascript.jsb "$OUTPUTDIR/cgi-bin/Addins/sBook/data/html/js/"
 

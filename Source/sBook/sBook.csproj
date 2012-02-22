@@ -19,7 +19,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -28,7 +27,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Test|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -68,7 +66,8 @@
     <Compile Include="sBook\Authorization.cs" />
     <Compile Include="sBook.Strings\Exception.cs" />
     <Compile Include="sBook.Strings\LogDebug.cs" />
-    <Compile Include="sBook.Enums\AuthorizationPermission.cs" />
+    <Compile Include="sBook\Token.cs" />
+    <Compile Include="sBook.Enums\TokenPermission.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="web/cgi-bin/Addins/sBook/data/html/xml/addins/sbook/index.xml">
     <Files>
-      <File FileName="web/cgi-bin/Addins/sBook/data/html/xml/addins/sbook/index.xml" Line="11" Column="48" />
+      <File FileName="web/cgi-bin/Addins/sBook/data/html/xml/addins/sbook/index.xml" Line="36" Column="1" />
       <File FileName="web/cgi-bin/Addins/sBook/data/content/addins/sbook/index_script.stpl" Line="23" Column="87" />
       <File FileName="sBook/sBook.Addin/Ajax.cs" Line="106" Column="8" />
       <File FileName="web/javascript/authorization.js" Line="51" Column="3" />
